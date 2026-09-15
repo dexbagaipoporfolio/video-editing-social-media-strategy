@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Performance Gap — YouTube, Video Editing &amp; Social Media Growth Strategy</title>
+<style>:root { --bg:#090b0e; --panel:#11151a; --panel2:#151a20; --line:#262d35; --text:#f7f8fa; --muted:#a9b0bb; --orange:#ff8a00; --orange2:#ffb13b; --white:#fff; --green:#4ade80; --blue:#60a5fa; --red:#fb7185;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.container{width:min(1240px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.08em} .brand span{color:var(--orange)}
+.navlinks{display:flex;gap:24px;color:#c7cbd1;font-size:13px;font-weight:700}
+.hero{padding:70px 0 42px;background:radial-gradient(circle at 80% 0,rgba(255,138,0,.12),transparent 30%),linear-gradient(180deg,#0b0e12,#090b0e)}
+.eyebrow,.kicker{font-size:11px;font-weight:900;letter-spacing:.15em;color:var(--orange);text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-.055em;margin:10px 0 18px;max-width:980px}
+.hero p{max-width:820px;color:var(--muted);font-size:17px}
+.flow{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.flow span{border:1px solid var(--line);background:#10141a;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}
+.flow b{color:var(--orange)}
+section{padding:68px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}
+.section-head h2{font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-.035em;margin:6px 0 0}
+.section-head p{max-width:560px;color:var(--muted);margin:0}
+.youtube-zone{border-top:1px solid var(--line);background:#0c0f13}
+.feature-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:start}
+.player{background:#050607;border:1px solid #242a31;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.player-frame{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;cursor:zoom-in}
+.player-frame img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.75);border:2px solid rgba(255,255,255,.75);font-size:28px;padding-left:5px}
+.player-meta{padding:18px 20px 20px}
+.player-meta .title{font-weight:900;font-size:22px;line-height:1.25}
+.player-meta .meta{margin-top:7px;color:var(--muted);font-size:13px}
+.stack{display:grid;gap:14px}
+.box{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:19px}
+.box h3{margin:0 0 9px;font-size:15px}
+.box p{margin:0;color:var(--muted);font-size:13px}
+.copy-row{display:flex;gap:9px;align-items:flex-start}
+.copy-text{flex:1}
+.copybtn{border:1px solid #38414b;background:#171c22;color:#e9edf2;border-radius:9px;padding:7px 10px;font-weight:800;font-size:11px;cursor:pointer}
+.copybtn:hover{border-color:var(--orange)}
+.keyword-cloud{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.keyword-cloud span{padding:6px 9px;border-radius:999px;background:#1a2027;border:1px solid #2b333c;color:#cfd4da;font-size:11px}
+.action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.action{border:1px solid var(--line);border-radius:16px;background:#11151a;padding:18px}
+.action .num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#080808;font-weight:900;margin-bottom:14px}
+.action h3{margin:0 0 5px;font-size:15px} .action p{margin:0;color:var(--muted);font-size:12px}
+.episodes{background:#090b0e}
+.episode-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.episode-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.mini-thumb{min-height:230px;padding:15px 17px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:
+radial-gradient(circle at 85% 10%,rgba(255,138,0,.23),transparent 28%),
+linear-gradient(135deg,#090a0c 10%,#16191d 55%,#050607 100%)}
+.mini-thumb:after{content:"";position:absolute;right:-30px;bottom:-30px;width:150px;height:150px;border:28px solid rgba(255,138,0,.055);border-radius:50%}
+.mini-top{position:absolute;top:13px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ep-pill{background:var(--orange);color:#0a0a0a;padding:5px 8px;border-radius:6px;font-size:10px;font-weight:900}
+.sample-pill{color:#bfc5cc;font-size:8px;font-weight:900;letter-spacing:.08em}
+.mini-brand{font-size:8px;letter-spacing:.14em;color:#aeb4bc;margin-bottom:9px}
+.mini-head{font-weight:950;font-size:clamp(24px,2.2vw,38px);line-height:.91;letter-spacing:-.04em;position:relative;z-index:1}
+.mini-head span{color:var(--orange)}
+.mini-sub{margin-top:12px;border-left:3px solid var(--orange);padding-left:9px;font-size:9px;letter-spacing:.11em;font-weight:900;color:#e9edf2;position:relative;z-index:1}
+.episode-copy{padding:18px;display:flex;flex-direction:column;justify-content:center}
+.search-label{font-size:9px;letter-spacing:.12em;color:var(--orange);font-weight:900;margin-bottom:7px}
+.episode-copy h3{font-size:15px;line-height:1.35;margin:0 0 9px}
+.episode-copy p{margin:0;color:var(--muted);font-size:11px}
+.playbook{background:#0d1014;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.checklist,.matrix{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:22px}
+.checklist h3,.matrix h3{margin-top:0}
+.checks{display:grid;gap:10px}
+.check{display:flex;gap:10px;color:#d6d9df;font-size:13px}
+.check i{font-style:normal;color:var(--green);font-weight:900}
+.matrix-row{display:grid;grid-template-columns:1fr 1.2fr;gap:12px;padding:12px 0;border-bottom:1px solid #232931;font-size:12px}
+.matrix-row:last-child{border-bottom:0}
+.matrix-row b{color:#f2f3f5} .matrix-row span{color:var(--muted)}
+.social{background:linear-gradient(180deg,#090b0e,#0f1318)}
+.platform-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.platform{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:20px}
+.platform .icon{width:38px;height:38px;border-radius:12px;background:#1b2128;display:grid;place-items:center;font-weight:950;color:var(--orange);margin-bottom:15px}
+.platform h3{margin:0 0 8px} .platform p{font-size:12px;color:var(--muted);margin:0 0 13px}
+.platform ul{padding-left:17px;margin:0;color:#d4d8dd;font-size:12px;display:grid;gap:7px}
+.calendar{margin-top:22px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.cal-head,.cal-row{display:grid;grid-template-columns:110px 1fr 1fr 1fr;gap:0}
+.cal-head div{background:#171c22;color:#9fa6af;font-size:10px;font-weight:900;letter-spacing:.1em;padding:12px;border-right:1px solid var(--line)}
+.cal-row div{padding:13px 12px;border-top:1px solid var(--line);border-right:1px solid var(--line);font-size:12px}
+.cal-row div:first-child{font-weight:900;color:var(--orange)}
+.analytics{background:#090b0e}
+.metric-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.metric{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:17px}
+.metric b{display:block;font-size:15px;margin-bottom:4px} .metric span{font-size:11px;color:var(--muted)}
+.note{margin-top:22px;border-left:3px solid var(--orange);padding:12px 16px;background:#11151a;color:#b8bec6;font-size:12px;border-radius:0 10px 10px 0}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#7e8792;font-size:11px} .title-ideas{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.title-ideas li{display:grid;grid-template-columns:24px 1fr;gap:9px;align-items:start;color:#d8dde4;font-size:11px;line-height:1.4}
+.title-ideas li span{width:22px;height:22px;display:grid;place-items:center;background:#1b2128;border:1px solid #303944;border-radius:6px;color:var(--orange);font-weight:900;font-size:9px}
+.micro-note{margin-top:10px!important;font-size:10px!important;color:#7f8894!important}
+.count{float:right;color:#8f98a4;font-size:9px;font-weight:800;letter-spacing:.04em}
+.compact-copy{font-size:11px!important;line-height:1.55!important}
+.editing{background:#090b0e;border-top:1px solid var(--line)}
+.edit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.edit-card{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:20px}
+.edit-card .time{display:inline-block;margin-bottom:12px;background:#21170d;border:1px solid rgba(255,138,0,.35);color:var(--orange2);border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900;letter-spacing:.08em}
+.edit-card h3{margin:0 0 8px;font-size:16px}
+.edit-card p{margin:0;color:var(--muted);font-size:12px}
+.edit-card ul{margin:12px 0 0;padding-left:17px;display:grid;gap:7px;color:#d3d7dd;font-size:11px}
+.edit-flow{margin-top:20px;border:1px solid var(--line);background:#0d1116;border-radius:18px;padding:20px}
+.edit-flow h3{margin:0 0 12px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.timeline div{background:#151a20;border:1px solid #29313a;border-radius:12px;padding:12px;font-size:10px;color:#cdd2d8}
+.timeline b{display:block;color:var(--orange);margin-bottom:4px}
+.management{background:#0d1014;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.management-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.pipeline{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:20px}
+.pipeline-row{display:grid;grid-template-columns:160px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #232931;font-size:12px}
+.pipeline-row:last-child{border-bottom:0}
+.pipeline-row b{color:#fff}.pipeline-row span{color:var(--muted)}
+.asset-table{border:1px solid var(--line);background:var(--panel);border-radius:18px;overflow:hidden}
+.asset-row{display:grid;grid-template-columns:1fr 90px 90px;gap:0;border-top:1px solid var(--line)}
+.asset-row:first-child{border-top:0}
+.asset-row div{padding:11px 12px;font-size:11px;border-right:1px solid var(--line)}
+.asset-row div:last-child{border-right:0}
+.asset-head{background:#171c22;color:#9fa6af;font-weight:900;letter-spacing:.06em}
+.status{color:var(--green);font-weight:900}
+.naming{margin-top:14px;padding:12px 14px;border-radius:12px;background:#11161c;border:1px dashed #39424d;color:#b8bec6;font-size:11px}
+.naming code{color:#fff}
+@media(max-width:950px){ .edit-grid{grid-template-columns:1fr 1fr} .management-grid{grid-template-columns:1fr} .timeline{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){ .edit-grid,.timeline{grid-template-columns:1fr} .pipeline-row{grid-template-columns:1fr} .asset-row{grid-template-columns:1fr 70px 70px}
+} .real-thumb{ min-height:230px; background:#050607; position:relative; overflow:hidden;
+}
+.real-thumb img{ width:100%; height:100%; min-height:230px; object-fit:cover; display:block;
+}
+.real-thumb .real-badge{ position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.76); border:1px solid rgba(255,138,0,.45); color:#fff; padding:6px 9px; border-radius:8px; font-size:9px; font-weight:900; letter-spacing:.08em;
+} @media(max-width:950px){ .feature-grid,.two-col{grid-template-columns:1fr} .action-grid,.platform-grid{grid-template-columns:repeat(2,1fr)} .episode-grid{grid-template-columns:1fr} .metric-grid{grid-template-columns:repeat(2,1fr)} .navlinks{display:none}
+}
+@media(max-width:640px){ .episode-card{grid-template-columns:1fr} .action-grid,.platform-grid,.metric-grid{grid-template-columns:1fr} .cal-head,.cal-row{grid-template-columns:86px 1fr} .cal-head div:nth-child(n+3),.cal-row div:nth-child(n+3){display:none} .section-head{align-items:start;flex-direction:column}
+} /* Full 16:9 thumbnail preview */
+.player-frame{ position:relative; aspect-ratio:16/9; background:#000; overflow:hidden; cursor:zoom-in;
+}
+.player-frame img{ width:100%; height:100%; object-fit:contain !important; object-position:center; display:block;
+}
+.preview-hint{ position:absolute; left:16px; bottom:14px; display:flex; align-items:center; gap:7px; background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.18); color:#fff; border-radius:999px; padding:7px 10px; font-size:10px; font-weight:900; letter-spacing:.05em; backdrop-filter:blur(8px);
+}
+.preview-hint span{color:var(--orange)}
+.thumbnail-highlight{ margin-top:12px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px;
+}
+.thumbnail-highlight div{ border:1px solid #2d353e; background:#11161c; border-radius:10px; padding:9px 10px; font-size:9px; color:#aeb6bf;
+}
+.thumbnail-highlight b{ display:block; color:#fff; font-size:10px; margin-bottom:2px;
+} /* Thumbnail modal */
+.thumb-modal{ display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.91); padding:28px; align-items:center; justify-content:center;
+}
+.thumb-modal.open{display:flex}
+.thumb-modal-inner{ width:min(1500px,96vw);
+}
+.thumb-modal img{ width:100%; aspect-ratio:16/9; object-fit:contain; display:block; background:#000; border:1px solid #303741; border-radius:16px; box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+.thumb-modal-bar{ display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:10px; color:#d9dde2; font-size:12px;
+}
+.thumb-modal-close{ border:1px solid #3a424c; background:#14191f; color:#fff; border-radius:10px; padding:8px 11px; cursor:pointer; font-weight:900;
+}
+.thumb-modal-close:hover{border-color:var(--orange)}
+@media(max-width:640px){ .thumbnail-highlight{grid-template-columns:1fr} .thumb-modal{padding:10px}
+} .youtube-details{ margin-top:18px; border:1px solid var(--line); background:var(--panel); border-radius:18px; padding:20px;
+}
+.youtube-details-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:18px; margin-bottom:16px;
+}
+.youtube-details-head h3{margin:4px 0 5px;font-size:19px}
+.youtube-details-head p{margin:0;color:var(--muted);font-size:11px;max-width:680px}
+.details-priority{ flex:0 0 auto; background:#21170d; color:var(--orange2); border:1px solid rgba(255,138,0,.35); border-radius:999px; padding:6px 9px; font-size:9px; font-weight:900; letter-spacing:.07em;
+}
+.details-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+}
+.detail-item{ border:1px solid #29313a; background:#0d1116; border-radius:13px; padding:13px;
+}
+.detail-item .level{ font-size:8px; font-weight:900; letter-spacing:.1em; color:var(--orange); margin-bottom:5px;
+}
+.detail-item h4{margin:0 0 5px;font-size:13px}
+.detail-item p{margin:0;color:#aeb5be;font-size:10px;line-height:1.5}
+.detail-item strong{color:#fff}
+.channel-keyword-box{ margin-top:10px; border:1px solid #29313a; background:#0d1116; border-radius:13px; padding:14px;
+}
+.channel-keyword-box h4{margin:0 0 5px;font-size:13px}
+.channel-keyword-box p{margin:0;color:#aeb5be;font-size:10px;line-height:1.5}
+.channel-keywords-copy{ margin-top:9px!important; color:#dce1e6!important;
+}
+.optimization-order{ display:flex; flex-wrap:wrap; gap:7px; margin-top:12px;
+}
+.optimization-order span{ padding:6px 9px; border:1px solid #303944; background:#151a20; border-radius:999px; color:#cfd4da; font-size:9px;
+}
+.optimization-order b{color:var(--orange)}
+@media(max-width:640px){ .details-grid{grid-template-columns:1fr} .youtube-details-head{flex-direction:column}
+} .topic-strategy{ margin-top:18px; border:1px solid var(--line); background:linear-gradient(180deg,#11161c,#0d1116); border-radius:18px; padding:20px;
+}
+.topic-strategy-head{ display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:16px;
+}
+.topic-strategy-head h3{margin:4px 0 5px;font-size:19px}
+.topic-strategy-head p{margin:0;color:var(--muted);font-size:11px;max-width:720px}
+.topic-badge{ flex:0 0 auto; background:#21170d; color:var(--orange2); border:1px solid rgba(255,138,0,.35); border-radius:999px; padding:6px 9px; font-size:9px; font-weight:900; letter-spacing:.07em;
+}
+.topic-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px;
+}
+.topic-card{ border:1px solid #29313a; border-radius:14px; padding:15px; background:#0b0f13;
+}
+.topic-card.bad{border-color:rgba(251,113,133,.28)}
+.topic-card.good{border-color:rgba(74,222,128,.28)}
+.topic-card h4{margin:0 0 8px;font-size:13px}
+.topic-card p{margin:0;color:#aeb5be;font-size:10px;line-height:1.55}
+.topic-list{display:grid;gap:8px;margin-top:12px}
+.topic-example{ display:grid; grid-template-columns:78px 1fr; gap:9px; align-items:start; padding:9px 10px; border-radius:10px; background:#12171d; border:1px solid #2b333d; font-size:10px;
+}
+.topic-example b{font-size:8px;letter-spacing:.09em}
+.topic-example.bad b{color:#fb7185}
+.topic-example.good b{color:#4ade80}
+.topic-rule{ margin-top:14px; display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+}
+.topic-rule div{ border:1px solid #2b333d; background:#11161c; border-radius:11px; padding:10px; font-size:9px; color:#aeb5be;
+}
+.topic-rule b{display:block;color:#fff;margin-bottom:3px;font-size:10px}
+.topic-fyp{ margin-top:14px; border-left:3px solid var(--orange); background:#11161c; border-radius:0 10px 10px 0; padding:12px 14px; color:#b8bec6; font-size:10px; line-height:1.55;
+}
+.topic-fyp strong{color:#fff}
+@media(max-width:640px){ .topic-grid,.topic-rule{grid-template-columns:1fr} .topic-strategy-head{flex-direction:column}
+} /* Balanced YouTube hero layout */
+.left-feature{ display:grid; gap:14px; min-width:0;
+}
+.left-support{ display:grid; gap:14px;
+}
+.left-support-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px;
+}
+.support-card,
+.viewer-path-card,
+.quick-details-card{ border:1px solid var(--line); background:var(--panel); border-radius:18px;
+}
+.support-card{ padding:18px;
+}
+.support-kicker{ color:var(--orange); font-size:8px; line-height:1; font-weight:900; letter-spacing:.12em; margin-bottom:8px;
+}
+.support-card h3,
+.viewer-path-card h3{ margin:0 0 10px; font-size:14px;
+}
+.support-steps{ display:grid; gap:8px;
+}
+.support-steps > div{ display:grid; grid-template-columns:24px 1fr; gap:8px; align-items:start;
+}
+.support-steps b{ width:22px; height:22px; border-radius:7px; display:grid; place-items:center; background:#21170d; border:1px solid rgba(255,138,0,.35); color:var(--orange); font-size:9px;
+}
+.support-steps span{ display:grid; gap:1px;
+}
+.support-steps strong{ color:#f3f5f7; font-size:10px;
+}
+.support-steps small{ color:#8f98a3; font-size:9px; line-height:1.35;
+}
+.readiness-list{ display:grid; gap:9px;
+}
+.readiness-list div{ display:grid; grid-template-columns:18px 1fr; gap:7px; align-items:start; color:#b8c0c9; font-size:9px; line-height:1.45;
+}
+.readiness-list i{ font-style:normal; color:var(--green); font-weight:900;
+}
+.viewer-path-card{ padding:18px; display:grid; grid-template-columns:.8fr 1.2fr; gap:18px; align-items:center;
+}
+.viewer-path-card p{ margin:0; color:#98a1ac; font-size:9px; line-height:1.5;
+}
+.viewer-path{ display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:6px;
+}
+.viewer-path span{ border:1px solid #313943; background:#151a20; color:#d2d7dd; border-radius:999px; padding:6px 8px; font-size:8px; font-weight:800;
+}
+.viewer-path b{ color:var(--orange); font-size:10px;
+}
+.quick-details-card{ display:grid; grid-template-columns:repeat(4,1fr); overflow:hidden;
+}
+.quick-detail{ padding:13px; border-right:1px solid var(--line);
+}
+.quick-detail:last-child{ border-right:0;
+}
+.quick-detail b{ display:block; color:var(--orange); font-size:8px; letter-spacing:.08em; margin-bottom:5px;
+}
+.quick-detail span{ color:#aeb6bf; font-size:8px; line-height:1.4; display:block;
+}
+@media(max-width:950px){ .left-support-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){ .left-support-grid, .viewer-path-card, .quick-details-card{ grid-template-columns:1fr; } .viewer-path{justify-content:flex-start} .quick-detail{ border-right:0; border-bottom:1px solid var(--line); } .quick-detail:last-child{border-bottom:0}
+} /* Readability pass for small descriptions */
+.episode-copy p{font-size:12px!important;line-height:1.55!important}
+.section-head p{font-size:13px!important;line-height:1.55!important}
+.box p{font-size:12px!important;line-height:1.55!important}
+.micro-note{font-size:11px!important;line-height:1.5!important}
+.detail-item p{font-size:12px!important;line-height:1.55!important}
+.channel-keyword-box p{font-size:12px!important;line-height:1.55!important}
+.topic-card p{font-size:12px!important;line-height:1.55!important}
+.topic-example{font-size:11px!important}
+.topic-rule div{font-size:11px!important;line-height:1.45!important}
+.topic-fyp{font-size:12px!important;line-height:1.6!important}
+.support-steps strong{font-size:11px!important}
+.support-steps small{font-size:10.5px!important;line-height:1.45!important}
+.readiness-list div{font-size:11px!important;line-height:1.5!important}
+.viewer-path-card p{font-size:11px!important;line-height:1.55!important}
+.quick-detail span{font-size:10.5px!important;line-height:1.5!important}
+.edit-card p{font-size:12px!important;line-height:1.55!important}
+.edit-card ul{font-size:11.5px!important;line-height:1.5!important}
+.platform p{font-size:12px!important;line-height:1.55!important}
+.platform ul{font-size:11.5px!important;line-height:1.5!important}
+.pipeline-row{font-size:12px!important;line-height:1.5!important}
+.asset-row div{font-size:11.5px!important}
+.note{font-size:11.5px!important;line-height:1.55!important}
+.metric span{font-size:11.5px!important;line-height:1.45!important}
+.mini-sub{font-size:10.5px!important;line-height:1.35!important} /* Gym / fitness search expansion */
+.fitness-discovery-note{ margin-top:12px; padding:11px 12px; border-left:3px solid var(--orange); background:#0d1116; color:#aeb6bf; border-radius:0 10px 10px 0; font-size:11px; line-height:1.55;
+}
+.fitness-discovery-note b{color:#fff} .fitness-social-search{ margin-top:20px; border:1px solid var(--line); background:#10151b; border-radius:18px; padding:20px;
+}
+.fitness-social-head h3{margin:4px 0 6px;font-size:20px}
+.fitness-social-head p{margin:0;color:var(--muted);font-size:12px;line-height:1.55;max-width:850px}
+.fitness-platform-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:16px;
+}
+.fitness-platform-card{ border:1px solid #2a323b; background:#0c1015; border-radius:14px; padding:15px;
+}
+.fp-label{ color:var(--orange); font-size:9px; font-weight:900; letter-spacing:.1em; margin-bottom:6px;
+}
+.fitness-platform-card h4{margin:0 0 8px;font-size:14px}
+.fitness-platform-card p{margin:6px 0 0;color:#aeb6bf;font-size:11px;line-height:1.5}
+.fitness-platform-card b{color:#fff}
+.social-search-rule{ margin-top:12px; padding:12px 14px; border-radius:12px; background:#151a20; color:#aeb6bf; font-size:11px; line-height:1.55;
+}
+.social-search-rule b{color:#fff} /* Australia / AEST timing */
+.aest-timing{ margin-top:22px; border:1px solid var(--line); background:linear-gradient(180deg,#11161c,#0d1116); border-radius:18px; padding:20px;
+}
+.aest-head{ display:flex; justify-content:space-between; gap:20px; align-items:flex-start;
+}
+.aest-head h3{margin:4px 0 6px;font-size:20px}
+.aest-head p{margin:0;color:var(--muted);font-size:12px;line-height:1.55;max-width:820px}
+.aest-badge{ flex:0 0 auto; background:#21170d; color:var(--orange2); border:1px solid rgba(255,138,0,.35); border-radius:999px; padding:7px 10px; font-size:9px; font-weight:900; letter-spacing:.08em;
+}
+.timing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px;
+}
+.timing-card{ border:1px solid #2b333d; background:#0b0f13; border-radius:14px; padding:14px;
+}
+.timing-platform{ color:var(--orange); font-size:8px; font-weight:900; letter-spacing:.1em; margin-bottom:7px;
+}
+.timing-card strong{ display:block; font-size:14px; color:#fff; margin-bottom:6px;
+}
+.timing-card span{ display:block; color:#aeb6bf; font-size:10.5px; line-height:1.5;
+}
+.fitness-test{ border-color:rgba(74,222,128,.28);
+}
+.timing-note{ margin-top:12px; border-left:3px solid var(--orange); background:#11161c; border-radius:0 10px 10px 0; padding:12px 14px; color:#aeb6bf; font-size:10.5px; line-height:1.55;
+}
+.timing-note b{color:#fff}
+.timing-source{ margin-top:9px; color:#75808c; font-size:9.5px; line-height:1.45;
+}
+.timing-source a{color:#9dc6ff;text-decoration:underline} @media(max-width:950px){ .timing-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){ .fitness-platform-grid,.timing-grid{grid-template-columns:1fr} .aest-head{flex-direction:column}
+} /* Fill remaining YouTube-strategy space with practical analytics */
+.post-analytics-card{ border:1px solid var(--line); background:linear-gradient(180deg,#11161c,#0c1015); border-radius:18px; padding:18px;
+}
+.post-analytics-head{ display:flex; justify-content:space-between; gap:18px; align-items:flex-start;
+}
+.post-analytics-head h3{ margin:0 0 6px; font-size:15px;
+}
+.post-analytics-head p{ margin:0; color:#9da6b0; font-size:10.5px; line-height:1.5; max-width:650px;
+}
+.analytics-badge{ flex:0 0 auto; border:1px solid rgba(74,222,128,.3); background:rgba(74,222,128,.06); color:#8cf0ae; border-radius:999px; padding:6px 8px; font-size:8px; font-weight:900; letter-spacing:.08em;
+}
+.funnel-strip{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr; gap:7px; align-items:center; margin-top:14px;
+}
+.funnel-strip>div{ min-height:64px; border:1px solid #2b333d; background:#0b0f13; border-radius:11px; padding:9px; display:grid; grid-template-columns:21px 1fr; gap:7px; align-items:start;
+}
+.funnel-strip b{ width:20px;height:20px;border-radius:6px; display:grid;place-items:center; background:#21170d;color:var(--orange); font-size:8px;
+}
+.funnel-strip span{ font-size:9px; font-weight:900; color:#fff;
+}
+.funnel-strip small{ display:block; margin-top:2px; color:#818b96; font-size:7.5px; font-weight:500; line-height:1.35;
+}
+.funnel-strip em{ color:var(--orange); font-style:normal; font-weight:900; text-align:center;
+}
+.analytics-action-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:9px; margin-top:10px;
+}
+.analytics-action{ border:1px solid #29313a; background:#0e1318; border-radius:11px; padding:11px;
+}
+.aa-condition{ color:var(--orange); font-size:7.5px; font-weight:900; letter-spacing:.08em; margin-bottom:4px;
+}
+.analytics-action strong{ display:block; color:#fff; font-size:10px; margin-bottom:3px;
+}
+.analytics-action p{ margin:0; color:#98a2ad; font-size:8.5px; line-height:1.45;
+}
+.analytics-review-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:10px;
+}
+.analytics-review-row div{ border-top:1px solid #29313a; padding-top:9px;
+}
+.analytics-review-row b{ display:block; color:#fff; font-size:8px; letter-spacing:.08em; margin-bottom:3px;
+}
+.analytics-review-row span{ display:block; color:#89939e; font-size:8px; line-height:1.4;
+}
+.execution-tools-card{ border:1px solid var(--line); background:#10151b; border-radius:18px; padding:15px 17px;
+}
+.execution-tools{ display:flex; flex-wrap:wrap; gap:7px;
+}
+.execution-tools span{ border:1px solid #2d353e; background:#0c1015; border-radius:999px; padding:6px 9px; color:#98a2ad; font-size:8.5px;
+}
+.execution-tools b{color:#fff}
+@media(max-width:950px){ .funnel-strip{grid-template-columns:1fr 1fr} .funnel-strip em{display:none}
+}
+@media(max-width:640px){ .post-analytics-head{flex-direction:column} .analytics-action-grid,.analytics-review-row{grid-template-columns:1fr}
+} /* EP1–10 thumbnail library: full 16:9 preview + title below */
+.episode-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px;
+}
+.episode-card{ display:flex !important; flex-direction:column !important; min-width:0; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--panel);
+}
+.episode-card .mini-thumb,
+.episode-card .real-thumb{ width:100%; aspect-ratio:16/9 !important; min-height:0 !important; height:auto !important; flex:none; overflow:hidden; border-radius:0;
+}
+.episode-card .real-thumb{ background:#000;
+}
+.episode-card .real-thumb img{ width:100%; height:100%; object-fit:contain !important; object-position:center; display:block; background:#000;
+}
+.episode-card .mini-thumb{ padding:18px 20px; justify-content:flex-end;
+}
+.episode-card .mini-head{ font-size:clamp(28px,3vw,48px); max-width:86%;
+}
+.episode-card .mini-sub{ font-size:10px !important;
+}
+.episode-card .episode-copy{ width:100%; padding:18px 20px 20px; border-top:1px solid var(--line); min-height:150px; justify-content:flex-start;
+}
+.episode-card .episode-copy h3{ font-size:16px; line-height:1.4; margin:0 0 9px;
+}
+.episode-card .episode-copy p{ font-size:12px !important; line-height:1.5 !important;
+}
+.episode-preview{ position:relative; cursor:zoom-in;
+}
+.episode-preview:before{ content:"FULL 16:9"; position:absolute; right:12px; bottom:12px; z-index:5; background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.18); color:#fff; padding:5px 8px; border-radius:999px; font-size:8px; font-weight:900; letter-spacing:.07em; pointer-events:none;
+}
+.episode-preview:hover:before{ border-color:var(--orange); color:var(--orange2);
+}
+.real-thumb .real-badge{ top:12px !important; bottom:auto !important;
+}
+@media(max-width:780px){ .episode-grid{grid-template-columns:1fr} .episode-card .episode-copy{min-height:0}
+} .episode-design-modal{ display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,.93); padding:24px; align-items:center; justify-content:center;
+}
+.episode-design-modal.open{display:flex}
+.episode-design-dialog{width:min(1400px,96vw)}
+.episode-design-bar{ display:flex; justify-content:space-between; gap:20px; align-items:center; margin-bottom:10px; color:#fff; font-size:12px;
+}
+.episode-design-bar button{ border:1px solid #3a424c; background:#14191f; color:#fff; border-radius:10px; padding:8px 11px; cursor:pointer; font-weight:900;
+}
+.episode-design-stage{ width:100%; aspect-ratio:16/9; background:#000; border:1px solid #303741; border-radius:16px; overflow:hidden;
+}
+.episode-design-stage .mini-thumb,
+.episode-design-stage .real-thumb{ width:100%; height:100% !important; min-height:0 !important; aspect-ratio:16/9 !important; border-radius:0;
+}
+.episode-design-stage .real-thumb img{ width:100%; height:100%; object-fit:contain !important;
+}
+.episode-design-stage .mini-head{ font-size:clamp(44px,6vw,86px) !important;
+}
+.episode-design-stage .episode-preview:before{display:none} /* Actual thumbnail visibility + creator credit */
+.thumbnail-status-note{ margin:-10px 0 24px; padding:12px 14px; border:1px solid #2c343d; border-left:3px solid var(--orange); background:#10151b; border-radius:0 12px 12px 0; color:#aeb6bf; font-size:11px; line-height:1.55;
+}
+.thumbnail-status-note b{color:#fff}
+.episode-card .real-thumb{ aspect-ratio:16/9 !important; width:100%; height:auto !important; min-height:0 !important; background:#000;
+}
+.episode-card .real-thumb img{ width:100%; height:100%; object-fit:contain !important; object-position:center; display:block;
+}
+.creator-credit-top{ margin-top:16px; display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; color:#98a1ab; font-size:11px;
+}
+.creator-credit-top span{ color:#7f8994; text-transform:uppercase; letter-spacing:.08em; font-size:9px; font-weight:900;
+}
+.creator-credit-top b{color:#fff;font-size:12px}
+.creator-credit-top em{ font-style:normal; color:#b4bcc5;
+}
+.creator-credit-top a{ color:var(--orange2); text-decoration:none; border-left:1px solid #343c45; padding-left:12px;
+}
+.creator-credit-footer{ display:flex; justify-content:space-between; gap:20px; align-items:center; margin-bottom:22px; padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,.1);
+}
+.creator-credit-footer span,
+.creator-credit-footer small{ display:block; color:#7e8792; font-size:10px;
+}
+.creator-credit-footer strong{ display:block; color:#fff; font-size:13px; margin:2px 0;
+}
+.creator-credit-footer a{ color:var(--orange2); font-size:11px; text-decoration:none;
+}
+@media(max-width:640px){ .creator-credit-footer{align-items:flex-start;flex-direction:column} .creator-credit-top a{border-left:0;padding-left:0;width:100%}
+} /* LARGE READABILITY MODE — increased text sizes throughout the client */
+body{ font-size:16px !important; line-height:1.6 !important;
+}
+.navlinks{ font-size:15px !important;
+}
+.brand{ font-size:16px !important;
+}
+.eyebrow,
+.kicker,
+.support-kicker,
+.search-label,
+.fp-label,
+.timing-platform,
+.level,
+.aa-condition,
+.ep-pill,
+.sample-pill,
+.mini-brand{ font-size:12px !important; line-height:1.35 !important; letter-spacing:.08em !important;
+}
+.hero p{ font-size:18px !important; line-height:1.65 !important;
+}
+.flow span{ font-size:14px !important;
+}
+.section-head p{ font-size:15px !important; line-height:1.65 !important;
+}
+.player-meta .title{ font-size:24px !important;
+}
+.player-meta .meta{ font-size:15px !important; line-height:1.5 !important;
+}
+.thumbnail-highlight div{ font-size:13px !important; line-height:1.5 !important;
+}
+.thumbnail-highlight b{ font-size:13px !important;
+}
+.box h3,
+.support-card h3,
+.viewer-path-card h3,
+.youtube-details-head h3,
+.topic-strategy-head h3,
+.fitness-social-head h3,
+.aest-head h3,
+.post-analytics-head h3,
+.edit-card h3,
+.pipeline h3,
+.matrix h3,
+.checklist h3{ font-size:18px !important; line-height:1.35 !important;
+}
+.box p,
+.micro-note,
+.compact-copy,
+.detail-item p,
+.channel-keyword-box p,
+.topic-card p,
+.topic-fyp,
+.fitness-platform-card p,
+.social-search-rule,
+.aest-head p,
+.timing-note,
+.post-analytics-head p,
+.edit-card p,
+.platform p,
+.note,
+.viewer-path-card p,
+.naming,
+.pipeline-row,
+.matrix-row{ font-size:14px !important; line-height:1.65 !important;
+}
+.count{ font-size:12px !important;
+}
+.copybtn,
+.thumb-modal-close,
+.episode-design-bar button{ font-size:13px !important; padding:9px 12px !important;
+}
+.title-ideas li{ font-size:14px !important; line-height:1.55 !important;
+}
+.title-ideas li span{ width:28px !important; height:28px !important; font-size:12px !important;
+}
+.keyword-cloud span,
+.optimization-order span,
+.viewer-path span,
+.execution-tools span{ font-size:12px !important; line-height:1.4 !important;
+}
+.detail-item h4,
+.channel-keyword-box h4,
+.topic-card h4,
+.fitness-platform-card h4{ font-size:16px !important;
+}
+.topic-example{ font-size:13px !important; line-height:1.5 !important;
+}
+.topic-example b{ font-size:11px !important;
+}
+.topic-rule div{ font-size:13px !important; line-height:1.55 !important;
+}
+.support-steps strong{ font-size:14px !important;
+}
+.support-steps small,
+.readiness-list div,
+.quick-detail span,
+.analytics-action p,
+.analytics-review-row span,
+.funnel-strip small,
+.timing-card span,
+.timing-source,
+.execution-tools span{ font-size:12px !important; line-height:1.55 !important;
+}
+.quick-detail b,
+.analytics-review-row b,
+.funnel-strip span,
+.analytics-action strong,
+.timing-platform,
+.aa-condition{ font-size:12px !important;
+}
+.funnel-strip b{ width:25px !important; height:25px !important; font-size:11px !important;
+}
+.analytics-badge,
+.aest-badge,
+.details-priority,
+.topic-badge{ font-size:11px !important; padding:7px 10px !important;
+}
+.episode-card .episode-copy h3{ font-size:18px !important; line-height:1.45 !important;
+}
+.episode-card .episode-copy p{ font-size:14px !important; line-height:1.6 !important;
+}
+.episode-card .mini-sub{ font-size:12px !important;
+}
+.edit-card ul,
+.platform ul,
+.check,
+.asset-row div{ font-size:13px !important; line-height:1.55 !important;
+}
+.timeline div{ font-size:12px !important; line-height:1.5 !important;
+}
+.timeline b{ font-size:13px !important;
+}
+.cal-head div{ font-size:12px !important;
+}
+.cal-row div{ font-size:14px !important;
+}
+.metric b{ font-size:17px !important;
+}
+.metric span{ font-size:13px !important;
+}
+.result span{ font-size:15px !important;
+}
+.result small{ font-size:13px !important; line-height:1.5 !important;
+}
+.platform h3{ font-size:18px !important;
+}
+.creator-credit-top{ font-size:14px !important;
+}
+.creator-credit-top span{ font-size:12px !important;
+}
+.creator-credit-top b{ font-size:15px !important;
+}
+.creator-credit-footer span,
+.creator-credit-footer small{ font-size:13px !important;
+}
+.creator-credit-footer strong{ font-size:16px !important;
+}
+.creator-credit-footer a{ font-size:14px !important;
+}
+.thumbnail-status-note,
+.fitness-discovery-note{ font-size:14px !important; line-height:1.65 !important;
+}
+.preview-hint,
+.real-badge{ font-size:11px !important;
+}
+.thumb-modal-bar,
+.episode-design-bar{ font-size:14px !important;
+}
+footer,
+footer p,
+footer a{ font-size:13px !important;
+}
+
+/* Actual EP9/EP10 thumbnail note */
+.thumb-source-note{
+  margin-top:8px;
+  color:#98a2ad;
+  font-size:13px;
+  line-height:1.5;
+}
+
+
+.title-strategy-note{
+  margin-top:14px;
+  padding:12px 14px;
+  border-left:3px solid var(--orange);
+  background:#0d1116;
+  border-radius:0 10px 10px 0;
+  color:#aeb6bf;
+  font-size:14px;
+  line-height:1.6;
+}
+.title-strategy-note b{color:#fff}
+
+
+/* EP1–10 hover interaction */
+.episode-card{
+  position:relative;
+  transform:translateY(0) scale(1);
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease,
+    background-color .24s ease;
+  will-change:transform;
+}
+.episode-card:hover{
+  transform:translateY(-7px) scale(1.018);
+  border-color:rgba(255,138,0,.58);
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,138,0,.10);
+  z-index:3;
+}
+.episode-card .episode-preview{
+  overflow:hidden;
+}
+.episode-card .episode-preview img{
+  transition:transform .32s ease, filter .32s ease;
+  will-change:transform;
+}
+.episode-card:hover .episode-preview img{
+  transform:scale(1.035);
+  filter:brightness(1.04) contrast(1.03);
+}
+.episode-card .episode-copy{
+  transition:background-color .24s ease;
+}
+.episode-card:hover .episode-copy{
+  background:rgba(255,138,0,.025);
+}
+.episode-card .search-label{
+  transition:color .24s ease, transform .24s ease;
+}
+.episode-card:hover .search-label{
+  color:var(--orange2);
+  transform:translateX(2px);
+}
+.episode-card:hover .episode-copy h3{
+  color:#fff;
+}
+
+/* Keyboard users get the same visual feedback */
+.episode-card:focus-within{
+  transform:translateY(-5px) scale(1.012);
+  border-color:rgba(255,138,0,.55);
+  box-shadow:0 16px 36px rgba(0,0,0,.38);
+}
+
+/* Respect motion accessibility settings */
+@media (prefers-reduced-motion: reduce){
+  .episode-card,
+  .episode-card .episode-preview img,
+  .episode-card .episode-copy,
+  .episode-card .search-label{
+    transition:none !important;
+  }
+  .episode-card:hover,
+  .episode-card:focus-within,
+  .episode-card:hover .episode-preview img{
+    transform:none !important;
+  }
+}
+
+
+/* Social platform cards: hover motion + expandable Learn more */
+.social-platform-card{
+  position:relative;
+  transform:translateY(0) scale(1);
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease,
+    background-color .24s ease;
+  will-change:transform;
+  overflow:hidden;
+}
+.social-platform-card:hover{
+  transform:translateY(-7px) scale(1.025);
+  border-color:rgba(255,138,0,.58);
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.40),
+    0 0 0 1px rgba(255,138,0,.10);
+  z-index:4;
+}
+.social-platform-card .icon{
+  transition:transform .24s ease, background-color .24s ease;
+}
+.social-platform-card:hover .icon{
+  transform:scale(1.08) rotate(-2deg);
+  background:#222a33;
+}
+.platform-summary{
+  min-height:94px;
+}
+.platform-learn-more{
+  margin-top:15px;
+  width:100%;
+  border:1px solid #35404b;
+  background:#151b22;
+  color:#fff;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.02em;
+  cursor:pointer;
+  text-align:left;
+  transition:border-color .2s ease, background .2s ease, color .2s ease;
+}
+.platform-learn-more:hover{
+  border-color:var(--orange);
+  color:var(--orange2);
+  background:#191f26;
+}
+.platform-learn-more::after{
+  content:"+";
+  float:right;
+  color:var(--orange);
+  font-size:17px;
+  line-height:1;
+}
+.platform-learn-more[aria-expanded="true"]::after{
+  content:"−";
+}
+.platform-more{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #2a323b;
+  display:grid;
+  gap:11px;
+}
+.platform-more[hidden]{
+  display:none !important;
+}
+.platform-more-row{
+  display:grid;
+  gap:3px;
+}
+.platform-more-row b{
+  color:#fff;
+  font-size:12px;
+}
+.platform-more-row span{
+  color:#aeb6bf;
+  font-size:12px;
+  line-height:1.55;
+}
+.social-platform-card.expanded{
+  grid-column:span 2;
+  transform:none;
+}
+.social-platform-card.expanded:hover{
+  transform:translateY(-3px) scale(1.006);
+}
+@media(max-width:950px){
+  .social-platform-card.expanded{
+    grid-column:span 2;
+  }
+}
+@media(max-width:640px){
+  .social-platform-card.expanded{
+    grid-column:span 1;
+  }
+  .platform-summary{
+    min-height:0;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .social-platform-card,
+  .social-platform-card .icon{
+    transition:none !important;
+  }
+  .social-platform-card:hover,
+  .social-platform-card.expanded:hover,
+  .social-platform-card:hover .icon{
+    transform:none !important;
+  }
+}
+
+
+/* Multi-format content management additions */
+.content-source-matrix{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.source-card{
+  border:1px solid var(--line);
+  background:#10151b;
+  border-radius:16px;
+  padding:16px;
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.source-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,138,0,.45);
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+}
+.source-card h4{
+  margin:0 0 7px;
+  color:#fff;
+  font-size:16px;
+}
+.source-card p{
+  margin:0;
+  color:#aeb6bf;
+  font-size:13px;
+  line-height:1.55;
+}
+@media(max-width:950px){
+  .content-source-matrix{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .content-source-matrix{grid-template-columns:1fr}
+}
+
+
+/* Editing rules cards: hover enlarge animation */
+.edit-card,
+.execution-card,
+.rule-card,
+.editing-card{
+  transform:translateY(0) scale(1);
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease,
+    background-color .24s ease;
+  will-change:transform;
+}
+.edit-card:hover,
+.execution-card:hover,
+.rule-card:hover,
+.editing-card:hover{
+  transform:translateY(-6px) scale(1.022);
+  border-color:rgba(255,138,0,.48);
+  box-shadow:
+    0 16px 36px rgba(0,0,0,.34),
+    0 0 0 1px rgba(255,138,0,.10);
+  z-index:3;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .edit-card,
+  .execution-card,
+  .rule-card,
+  .editing-card{
+    transition:none !important;
+  }
+  .edit-card:hover,
+  .execution-card:hover,
+  .rule-card:hover,
+  .editing-card:hover{
+    transform:none !important;
+  }
+}
+</style>
+<meta content="The Performance Gap content growth strategy: YouTube SEO, thumbnail packaging, video editing, social media distribution, content management and analytics." name="description"/><meta content="#090b0e" name="theme-color"/><link href="assets/images/strategy-mark.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<nav>
+<div class="container nav">
+<div class="brand"><span>SHSC</span> · CONTENT GROWTH STRATEGY</div>
+<div class="navlinks">
+<a href="#youtube">YouTube</a>
+<a href="#episodes">EP 1–10</a>
+<a href="#editing">Video Editing</a>
+<a href="#playbook">Execution</a>
+<a href="#social">Social Media</a>
+<a href="#management">Content Management</a>
+<a href="#analytics">Analytics</a>
+</div>
+</div>
+</nav>
+<header class="hero">
+<div class="container">
+<div class="eyebrow">CLIENT STRATEGY · EXECUTION PLAN</div>
+<h1>THE PERFORMANCE GAP<br/><span style="color:var(--orange)">YOUTUBE, VIDEO EDITING &amp; SOCIAL MEDIA STRATEGY</span></h1>
+<p>A practical client strategy for YouTube growth, podcast video editing, cross-platform content management, repurposing, publishing and analytics. Every section is designed to be applied to real episodes and production workflows.</p><div class="creator-credit-top" id="creatorCreditTop">
+<span>Prepared by</span>
+<b>Dexter Pabalate Bagaipo</b>
+<em>Video Editor &amp; Content Strategist</em>
+<a href="mailto:dexterpabalatebagaipo@gmail.com">dexterpabalatebagaipo@gmail.com</a>
+</div>
+<div class="flow">
+<span><b>1</b> Topic demand</span><span>→</span><span><b>2</b> Search-led title</span><span>→</span>
+<span><b>3</b> Thumbnail</span><span>→</span><span><b>4</b> Retention edit</span><span>→</span>
+<span><b>5</b> Distribution</span><span>→</span><span><b>6</b> Measure + improve</span>
+</div>
+</div>
+</header>
+<section class="youtube-zone" id="youtube">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">01 · YOUTUBE FIRST</div><h2>Featured Episode Packaging</h2></div>
+<p>The topic—not the word “podcast”—becomes the visual and search priority. Series branding remains consistent but secondary.</p>
+</div>
+<div class="feature-grid">
+<div class="left-feature"><div class="player">
+<div class="player-frame">
+<img alt="EP 10 Functional Health featured thumbnail" src="assets/images/ep10-functional-health.png"/>
+<div class="play">▶</div>
+<div class="preview-hint"><span>↗</span> CLICK TO VIEW FULL 16:9 THUMBNAIL</div>
+</div>
+<div class="player-meta">
+<div class="title">Functional Health for Performance: What Athletes Need to Know | Kyle Collymore — EP 10</div>
+<div class="meta">The Performance Gap with Sami Huseyin · Featured EP 10</div>
+<div class="thumbnail-highlight">
+<div><b>THUMBNAIL DESIGN HIGHLIGHTS</b> Functional Health is the dominant topic; faces and brand identity remain secondary.</div>
+<div><b>SEARCH + BROWSE BALANCE</b> “Functional Health” gives clear subject relevance while “What Athletes Need to Know” adds curiosity.</div>
+<div><b>MOBILE READABILITY</b> Short, high-contrast wording stays readable when YouTube displays the thumbnail at smaller sizes.</div>
+</div>
+</div>
+</div><div class="left-support">
+<div class="left-support-grid">
+<div class="support-card">
+<div class="support-kicker">PACKAGING WORKFLOW</div>
+<h3>Build the Episode in This Order</h3>
+<div class="support-steps">
+<div><b>1</b><span><strong>Relatable topic</strong><small>One clear problem, question or outcome.</small></span></div>
+<div><b>2</b><span><strong>Search-led title</strong><small>Put the useful subject before episode branding.</small></span></div>
+<div><b>3</b><span><strong>Thumbnail concept</strong><small>One visual idea; 2–4 readable words.</small></span></div>
+<div><b>4</b><span><strong>Opening 30 seconds</strong><small>Immediately deliver what the packaging promised.</small></span></div>
+<div><b>5</b><span><strong>Metadata</strong><small>Description, chapters, captions, playlist and tags.</small></span></div>
+</div>
+</div>
+<div class="support-card">
+<div class="support-kicker">RECOMMENDATION READINESS</div>
+<h3>Before Publishing, Ask:</h3>
+<div class="readiness-list">
+<div><i>✓</i><span>Would a new viewer understand the topic without knowing the podcast?</span></div>
+<div><i>✓</i><span>Does the title describe one distinct problem rather than a broad category?</span></div>
+<div><i>✓</i><span>Does the thumbnail reinforce the same promise instead of adding another message?</span></div>
+<div><i>✓</i><span>Does the first minute stay on the advertised topic?</span></div>
+<div><i>✓</i><span>Is there an obvious next related video for the viewer to watch?</span></div>
+</div>
+</div>
+</div>
+<div class="viewer-path-card">
+<div>
+<div class="support-kicker">VIEWER PATH</div>
+<h3>Do Not Let the Episode End in Isolation</h3>
+<p>Use playlists, end screens, cards where relevant, the description and a pinned comment to point viewers toward the most closely related episode—not simply the newest upload.</p>
+</div>
+<div class="viewer-path">
+<span>Sport Psychology</span><b>→</b><span>Pressure &amp; Mindset</span><b>→</b><span>Coach Communication</span><b>→</b><span>Next Relevant Episode</span>
+</div>
+</div>
+<div class="quick-details-card">
+<div class="quick-detail">
+<b>DESCRIPTION</b>
+<span>Open with 1–2 sentences explaining the exact episode problem and outcome.</span>
+</div>
+<div class="quick-detail">
+<b>CHAPTERS</b>
+<span>Use meaningful names such as “Confidence Under Pressure,” not “Topic 3.”</span>
+</div>
+<div class="quick-detail">
+<b>PLAYLIST</b>
+<span>Add the episode to the most relevant viewer-intent playlist.</span>
+</div>
+<div class="quick-detail">
+<b>END SCREEN</b>
+<span>Send the viewer to one closely related episode or playlist.</span>
+</div>
+</div>
+<div class="post-analytics-card" id="postPublishAnalytics">
+<div class="post-analytics-head">
+<div>
+<div class="support-kicker">POST-PUBLISH ANALYTICS</div>
+<h3>Measure the Content Funnel, Then Change One Thing</h3>
+<p>Use YouTube Studio data to diagnose where an episode is losing momentum. Avoid changing the topic, title, thumbnail and edit at the same time—you need to know which change actually helped.</p>
+</div>
+<div class="analytics-badge">NO FAKE KPI TARGETS</div>
+</div>
+<div class="funnel-strip">
+<div><b>1</b><span>Impressions<small>Was the video surfaced?</small></span></div>
+<em>→</em>
+<div><b>2</b><span>CTR<small>Did packaging earn the click?</small></span></div>
+<em>→</em>
+<div><b>3</b><span>First 30–60 sec<small>Did the intro match the promise?</small></span></div>
+<em>→</em>
+<div><b>4</b><span>Watch time<small>Did the conversation sustain interest?</small></span></div>
+<em>→</em>
+<div><b>5</b><span>Next action<small>Did viewers continue or return?</small></span></div>
+</div>
+<div class="analytics-action-grid">
+<div class="analytics-action">
+<div class="aa-condition">HIGH IMPRESSIONS · LOW CTR</div>
+<strong>Packaging problem</strong>
+<p>Retest the thumbnail/title while keeping the same topic. Make the viewer benefit clearer and simpler.</p>
+</div>
+<div class="analytics-action">
+<div class="aa-condition">GOOD CTR · EARLY DROP</div>
+<strong>Opening problem</strong>
+<p>Shorten the intro, move the strongest answer earlier, and make the first minute match the title promise.</p>
+</div>
+<div class="analytics-action">
+<div class="aa-condition">GOOD RETENTION · LOW REACH</div>
+<strong>Distribution/topic problem</strong>
+<p>Test a more relatable angle, stronger search phrasing, Shorts support, or a more relevant playlist path.</p>
+</div>
+<div class="analytics-action">
+<div class="aa-condition">SUGGESTED / BROWSE RISING</div>
+<strong>Build a cluster</strong>
+<p>Create the next closely related episode and connect both videos with end screens, playlists and pinned comments.</p>
+</div>
+</div>
+<div class="analytics-review-row">
+<div>
+<b>24–48 HOURS</b>
+<span>Impressions · CTR · early retention · traffic source mix</span>
+</div>
+<div>
+<b>7 DAYS</b>
+<span>Average view duration · watch time · search terms · shares · subscribers</span>
+</div>
+<div>
+<b>28 DAYS</b>
+<span>Suggested-video growth · returning viewers · playlist flow · repeat topic performance</span>
+</div>
+</div>
+</div><div class="execution-tools-card">
+<div class="support-kicker">EXECUTION TOOLS</div>
+<div class="execution-tools">
+<span><b>YouTube Studio</b> analytics + audience activity</span>
+<span><b>Google Trends</b> topic comparison</span>
+<span><b>YouTube Search</b> query / autocomplete research</span>
+<span><b>CapCut / Premiere</b> long-form + vertical edits</span>
+<span><b>Canva</b> thumbnail / carousel production</span>
+<span><b>Meta Business Suite</b> FB / IG scheduling</span>
+<span><b>TikTok Studio</b> platform analytics</span>
+</div>
+</div></div></div>
+<div class="stack">
+<div class="box">
+<h3>Primary searchable title</h3>
+<div class="copy-row">
+<p class="copy-text" id="titleText">Functional Health for Performance: What Athletes Need to Know | Kyle Collymore — EP 10</p>
+<button class="copybtn" onclick="copyText('titleText',this)">COPY</button>
+</div>
+</div>
+<div class="box">
+<h3>10 searchable future content title ideas</h3>
+<ol class="title-ideas"><li><span>1</span>How Long Should You Rest Between Sets for Muscle Growth and Strength?</li><li><span>2</span>Best Warm-Up Before a Gym Workout: What Actually Helps Performance?</li><li><span>3</span>Protein After Exercise: How Much Do You Really Need for Recovery?</li><li><span>4</span>Balanced Diet for People Who Exercise: What to Eat for Energy and Recovery</li><li><span>5</span>Why You Feel Tired After Training: Recovery Mistakes That Add Up</li><li><span>6</span>Strength Training vs Cardio: How to Balance Both in One Week</li><li><span>7</span>How Often Should You Train Each Muscle Group at the Gym?</li><li><span>8</span>Mobility Before or After Exercise? When Stretching Helps Most</li><li><span>9</span>What to Eat Before a Workout for Better Energy and Performance</li><li><span>10</span>Signs You Need a Rest Day: When More Exercise Stops Helping</li></ol>
+<p class="micro-note">These topics intentionally mix gym training, exercise technique, recovery, nutrition, balanced eating and performance. They are designed as new searchable content ideas—not recycled EP 1–10 titles.</p>
+<div class="title-strategy-note"><b>Searchable-title rule:</b> target one clear problem or question that a normal gym-goer, coach, active person or athlete could search. Mix practical exercise, recovery and nutrition topics so the channel can reach beyond a purely athlete-focused audience.</div></div>
+<div class="box">
+<h3>Keyword cluster <span class="count">867 characters</span></h3>
+<div class="copy-row">
+<p class="copy-text compact-copy" id="keywordText">functional health, athlete health, athletic performance, sports performance, athlete wellbeing, functional medicine for athletes, performance health, recovery and performance, sports health, strength and conditioning, athlete development, fitness coaching, exercise performance, gym performance, training readiness, training recovery, fatigue management, sleep and performance, nutrition for athletes, movement quality, injury prevention, injury resilience, rehabilitation, return to performance, physical preparation, sports science, coaching performance, exercise physiology, athlete monitoring, health screening, performance testing, training load, recovery strategies, wellness in sport, athlete longevity, functional fitness, strength training, exercise coaching, personal trainer education, coaching athletes, elite athlete preparation, performance optimization</p>
+<button class="copybtn" onclick="copyText('keywordText',this)">COPY</button>
+</div>
+<p class="micro-note">Use naturally across the title, first description paragraph, chapters, captions, transcript and related playlist. Do not paste every phrase unnaturally into one description.</p>
+</div>
+<div class="box">
+<h3>Tags — supporting only <span class="count">452 / 500 characters</span></h3>
+<div class="copy-row">
+<p class="copy-text compact-copy" id="tagText">functional health, athlete health, athletic performance, sports performance, athlete wellbeing, strength and conditioning, athlete development, fitness coaching, exercise performance, gym performance, training readiness, recovery, sports health, injury prevention, rehabilitation, physical preparation, sports science, athlete monitoring, functional fitness, strength training, coaching athletes, Kyle Collymore, Sami Huseyin, SHSC, The Performance Gap</p>
+<button class="copybtn" onclick="copyText('tagText',this)">COPY</button>
+</div>
+<p class="micro-note">Tags support topic context and name variations; thumbnail, title, topic demand and retention remain the higher-priority work.</p>
+<div class="fitness-discovery-note" id="fitnessDiscoveryNote"><b>Why these terms were added:</b> The episode focuses on functional health, but related viewers may search through athlete health, sports performance, recovery, training readiness, exercise performance, fitness coaching and strength-and-conditioning language. Use only terms that accurately match what Kyle and Sami discuss.</div></div>
+</div>
+</div>
+<div class="youtube-details">
+<div class="youtube-details-head">
+<div>
+<div class="kicker">YOUTUBE DETAILS OPTIMIZATION</div>
+<h3>Use Metadata to Clarify the Episode and Support Discovery</h3>
+<p>These details are applied after the topic, thumbnail and title are decided. They help YouTube understand the subject, help viewers navigate the episode, and create a consistent searchable channel structure.</p>
+</div>
+<div class="details-priority">APPLY TO EVERY UPLOAD</div>
+</div>
+<div class="details-grid">
+<div class="detail-item">
+<div class="level">HIGH PRIORITY</div>
+<h4>Title</h4>
+<p>Put the <strong>searchable problem or subject first</strong>. Keep guest name, episode number and “The Performance Gap” later. One clear promise is stronger than several competing keywords.</p>
+</div>
+<div class="detail-item">
+<div class="level">HIGH PRIORITY</div>
+<h4>Description opening</h4>
+<p>Use the first 1–2 sentences to explain exactly what the episode covers using natural topic language. Avoid beginning with a generic podcast description.</p>
+</div>
+<div class="detail-item">
+<div class="level">MEDIUM PRIORITY</div>
+<h4>Chapters</h4>
+<p>Name chapters by the question or concept discussed: <strong>“Acceleration vs Max Velocity”</strong> is more useful than “Topic 2.” Chapters improve navigation and create more searchable context.</p>
+</div>
+<div class="detail-item">
+<div class="level">MEDIUM PRIORITY</div>
+<h4>Captions &amp; transcript</h4>
+<p>Correct guest names, coaching terms and technical phrases. Accurate captions improve accessibility and ensure the spoken topic is represented correctly.</p>
+</div>
+<div class="detail-item">
+<div class="level">SUPPORTING</div>
+<h4>Tags</h4>
+<p>Use relevant topic variations, names and terminology only. Tags are a <strong>supporting metadata field</strong>; do not spend more time on them than the thumbnail, title or first minute of the edit.</p>
+</div>
+<div class="detail-item">
+<div class="level">SUPPORTING</div>
+<h4>Hashtags</h4>
+<p>Keep them narrow and directly related to the episode. A practical starting point is 2–3 relevant hashtags such as <strong>#SportsPerformance #StrengthAndConditioning #SportsCoaching</strong>.</p>
+</div>
+<div class="detail-item">
+<div class="level">CHANNEL STRUCTURE</div>
+<h4>Playlists</h4>
+<p>Group episodes by viewer intent: Speed &amp; Athletic Development, Coaching, Performance Psychology, Rehab &amp; Recovery, Nutrition. This makes the channel easier to browse after one video ends.</p>
+</div>
+<div class="detail-item">
+<div class="level">CHANNEL STRUCTURE</div>
+<h4>Channel About / positioning</h4>
+<p>State who the channel serves and the subjects it consistently covers. Keep the wording aligned with actual uploads so the overall channel topic remains coherent.</p>
+</div>
+</div>
+<div class="channel-keyword-box">
+<h4>Suggested channel keyword foundation</h4>
+<p>Channel keywords should describe the <strong>overall channel</strong>, not every possible search phrase. Keep them focused on Sami’s recurring expertise and series identity.</p>
+<p class="channel-keywords-copy" id="channelKeywords">Sami Huseyin, SHSC, The Performance Gap, strength and conditioning, sports performance, athletic development, sports coaching, speed training, sprint development, strength training, performance psychology, athlete mindset, sports nutrition, injury rehabilitation, return to performance, youth athlete development, physical preparation, recovery, training load, coaching education, performance coaching</p>
+<button class="copybtn" onclick="copyText('channelKeywords',this)" style="margin-top:10px">COPY CHANNEL KEYWORDS</button>
+</div>
+<div class="optimization-order">
+<span><b>1</b> Topic demand</span>
+<span><b>2</b> Thumbnail</span>
+<span><b>3</b> Title</span>
+<span><b>4</b> Opening retention</span>
+<span><b>5</b> Description + chapters</span>
+<span><b>6</b> Captions</span>
+<span><b>7</b> Playlists</span>
+<span><b>8</b> Tags / hashtags</span>
+</div>
+</div>
+<div class="topic-strategy">
+<div class="topic-strategy-head">
+<div>
+<div class="kicker">TOPIC SELECTION FOR RECOMMENDATIONS</div>
+<h3>Choose One Relatable, Distinct Problem Per Video</h3>
+<p>Broad topics describe a category. Strong episode topics tell a viewer exactly what problem, question or outcome the video is about. This matters when YouTube recommends the video on Home, Suggested, or the Shorts feed because a new viewer must understand the value immediately without already knowing the podcast.</p>
+</div>
+<div class="topic-badge">TOPIC FIRST, BRAND SECOND</div>
+</div>
+<div class="topic-grid">
+<div class="topic-card bad">
+<h4>Too general</h4>
+<p>These topics are valid fields, but they are too broad to create a strong reason to click when shown to a new viewer.</p>
+<div class="topic-list">
+<div class="topic-example bad"><b>GENERAL</b><span>Sport Psychology</span></div>
+<div class="topic-example bad"><b>GENERAL</b><span>Speed Training</span></div>
+<div class="topic-example bad"><b>GENERAL</b><span>Rehab</span></div>
+<div class="topic-example bad"><b>GENERAL</b><span>Sports Nutrition</span></div>
+</div>
+</div>
+<div class="topic-card good">
+<h4>Relatable + distinct</h4>
+<p>These angles connect the subject to a clear problem, decision or outcome that a coach or athlete can immediately recognize.</p>
+<div class="topic-list">
+<div class="topic-example good"><b>BETTER</b><span>How Athletes Perform Under Pressure: Confidence, Focus &amp; Decision-Making</span></div>
+<div class="topic-example good"><b>BETTER</b><span>Why Some Athletes Are Strong but Still Not Fast</span></div>
+<div class="topic-example good"><b>BETTER</b><span>Cleared to Play Doesn't Mean Ready to Perform</span></div>
+<div class="topic-example good"><b>BETTER</b><span>Are Athletes Eating Enough to Actually Recover and Perform?</span></div>
+</div>
+</div>
+</div>
+<div class="topic-rule">
+<div><b>1 · One viewer</b>Know who the video is for: coach, athlete, parent, practitioner, or a defined mix.</div>
+<div><b>2 · One problem</b>Avoid trying to cover speed, psychology, nutrition and recovery in one title or thumbnail.</div>
+<div><b>3 · One promise</b>The title and opening should tell viewers what they will understand, fix or improve.</div>
+<div><b>4 · One visual idea</b>The thumbnail should reinforce the same topic instead of introducing a second message.</div>
+</div>
+<div class="topic-fyp">
+<strong>Why this helps recommendation traffic:</strong> when YouTube surfaces a video to someone who does not know the channel, the viewer has only a few signals—topic, thumbnail, title and opening—to decide whether it is relevant. A specific topic makes it easier for the right viewer to recognize “this is for me,” while the episode itself can still explore the subject in depth after the click.
+  </div>
+</div>
+<div class="action-grid">
+<div class="action"><div class="num">1</div><h3>Before recording</h3><p>Choose one audience problem and one primary search phrase. Build the interview around that promise.</p></div>
+<div class="action"><div class="num">2</div><h3>During recording</h3><p>Capture 2–3 dedicated thumbnail poses and mark strong quotes, myths, stories and actionable clips.</p></div>
+<div class="action"><div class="num">3</div><h3>During editing</h3><p>Cold open with the strongest statement, keep the brand sting short, then deliver the episode promise immediately.</p></div>
+<div class="action"><div class="num">4</div><h3>After publishing</h3><p>Check impressions → CTR → first 30–60 sec retention → average view duration before deciding what to change.</p></div>
+</div>
+</div>
+</section>
+<section class="episodes" id="episodes">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">02 · PACKAGING LIBRARY</div><h2>Sample EP 1–10 Titles + Thumbnails</h2></div>
+<p>EP 5–10 use the topics visible in the current channel sample. EP 1–4 are clearly presented as sample packaging concepts until the original episode topics are inserted.</p>
+</div><div class="thumbnail-status-note" id="thumbnailStatusNote"><b>Thumbnail status:</b> EP 9 and EP 10 use the actual generated 16:9 thumbnail images. The remaining episode cards are visual concepts until the original guest/source photos are supplied. Click any thumbnail to inspect it at full 16:9.</div>
+<div class="episode-grid"><article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 10 Functional Health for Performance thumbnail" src="assets/images/ep10-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Functional Health for Performance: What Athletes Need to Know | Kyle Collymore — EP 10</h3>
+<p>functional health · athletic performance · what athletes need to know</p>
+<div class="thumb-source-note">Actual thumbnail updated to match the new Functional Health title.</div></div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 9 full 16:9 thumbnail" src="assets/images/ep09-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Sport Psychology for Better Performance: Confidence, Pressure &amp; Mindset | Tom Seabraw — EP 9</h3>
+<p>sport psychology · athlete mindset · performance under pressure</p>
+<div class="thumb-source-note">Actual thumbnail image added.</div></div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 8 full 16:9 thumbnail" src="assets/images/ep08-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>How to Build Faster Athletes: Speed Training &amp; Sprint Development | Sam Portland — EP 8</h3>
+<p>speed training · sprint development · acceleration</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 7 full 16:9 thumbnail" src="assets/images/ep07-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Endurance Training Without Sacrificing Strength &amp; Speed | Jake Caradoc — EP 7</h3>
+<p>endurance training · strength and conditioning · hybrid performance</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 6 full 16:9 thumbnail" src="assets/images/ep06-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Female Athlete Nutrition: Fueling, Recovery &amp; Performance | Aimee Ellen Okeeffe — EP 6</h3>
+<p>female athlete nutrition · sports nutrition · recovery</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 5 full 16:9 thumbnail" src="assets/images/ep05-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>From Rehab to Performance: Building Stronger, More Resilient Athletes | Patrick Canfor — EP 5</h3>
+<p>sports rehab · return to performance · injury resilience</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 4 full 16:9 thumbnail" src="assets/images/ep04-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Overcoaching Athletes: When Too Many Coaching Cues Hurt Performance</h3>
+<p>overcoaching athletes · coaching cues · athlete development</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 3 full 16:9 thumbnail" src="assets/images/ep03-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Training Readiness: How HRV, Sleep &amp; Fatigue Should Guide Coaching</h3>
+<p>HRV training · athlete monitoring · training readiness</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 2 full 16:9 thumbnail" src="assets/images/ep02-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>Why Athletes Keep Getting Injured: Training Load, Strength &amp; Recovery</h3>
+<p>injury prevention · training load · athlete recovery</p>
+</div>
+</article>
+<article class="episode-card">
+<div class="real-thumb episode-preview"><img alt="EP 1 full 16:9 thumbnail" src="assets/images/ep01-thumbnail.png"/></div>
+<div class="episode-copy">
+<div class="search-label">SEARCH-LED TITLE</div>
+<h3>What Actually Creates the Performance Gap? Strength, Recovery &amp; Mindset</h3>
+<p>sports performance · athlete development · strength and conditioning</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="editing" id="editing">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">03 · VIDEO EDITING STRATEGY</div><h2>Editing Rules That Can Be Applied to Every Episode</h2></div>
+<p>The edit should improve comprehension, authority and retention without turning a professional coaching podcast into an over-edited short-form video.</p>
+</div>
+<div class="edit-grid">
+<div class="edit-card"><div class="time">BEFORE EDITING</div><h3>Build an edit map</h3><p>Watch or skim the full recording once and mark the usable moments before detailed cuts.</p><ul><li>Best 8–15 sec cold-open quote</li><li>Main teaching sections</li><li>Strong disagreement / myth</li><li>Guest story or case example</li><li>5–7 short-form clip moments</li></ul></div>
+<div class="edit-card"><div class="time">0:00–0:15</div><h3>Cold open first</h3><p>Start with the strongest statement from the episode, not a long introduction.</p><ul><li>Show the speaker immediately</li><li>Add clean captions</li><li>Use only relevant B-roll</li><li>Do not reveal the entire answer</li></ul></div>
+<div class="edit-card"><div class="time">0:15–0:20</div><h3>Short brand sting</h3><p>Keep SHSC / Performance Gap identification brief so the viewer reaches the conversation quickly.</p><ul><li>3–5 seconds maximum</li><li>Consistent logo animation</li><li>Original / licensed audio only</li><li>No repeated long intro later</li></ul></div>
+<div class="edit-card"><div class="time">MAIN PODCAST</div><h3>Cut for clarity, not chaos</h3><p>Use speaker changes, reactions and meaningful visual resets rather than random zooms every few seconds.</p><ul><li>Remove false starts and repeated phrases</li><li>Tighten long dead air</li><li>Keep natural pauses that add meaning</li><li>Cut to listener reaction when useful</li></ul></div>
+<div class="edit-card"><div class="time">B-ROLL</div><h3>Show what is being discussed</h3><p>B-roll should explain or prove a point instead of acting as decorative filler.</p><ul><li>Coaching sessions</li><li>Speed / strength drills</li><li>Testing or monitoring footage</li><li>Whiteboard / programming examples</li><li>Relevant athlete movement only</li></ul></div>
+<div class="edit-card"><div class="time">TEXT &amp; GRAPHICS</div><h3>Highlight useful information</h3><p>Use graphics when they make a coaching concept easier to understand.</p><ul><li>Key terms and numbers</li><li>Simple comparison graphics</li><li>Definitions for technical language</li><li>Guest credentials lower-third</li><li>Avoid covering faces or movement</li></ul></div>
+<div class="edit-card"><div class="time">AUDIO</div><h3>Dialogue remains the priority</h3><p>Professional audio consistency matters more than aggressive music or sound effects.</p><ul><li>Remove obvious hum / noise</li><li>Balance both speakers</li><li>Prevent clipping</li><li>Keep music clearly below speech</li><li>Use the same loudness approach each episode</li></ul></div>
+<div class="edit-card"><div class="time">SHORT-FORM</div><h3>Cut native clips, not trailers</h3><p>Each vertical clip should make sense on its own to someone who has never seen the podcast.</p><ul><li>20–45 sec starting target</li><li>Hook in first 1–2 sec</li><li>One idea per clip</li><li>9:16 reframing</li><li>Readable burned-in captions</li></ul></div>
+<div class="edit-card"><div class="time">QUALITY CHECK</div><h3>Review before export</h3><p>A final quality pass prevents small production mistakes from lowering perceived professionalism.</p><ul><li>Correct guest / technical spellings</li><li>Check captions</li><li>Check cuts and sync</li><li>Check brand assets</li><li>Watch first minute again before export</li></ul></div>
+</div>
+<div class="edit-flow">
+<h3>Recommended long-form episode opening</h3>
+<div class="timeline">
+<div><b>0:00–0:15</b>Strong guest / host quote</div>
+<div><b>0:15–0:20</b>Short SHSC brand sting</div>
+<div><b>0:20–0:45</b>Topic promise + why it matters</div>
+<div><b>0:45+</b>Conversation with purposeful cuts</div>
+<div><b>Throughout</b>Mark clips, chapters and follow-up ideas</div>
+</div>
+</div>
+</div>
+</section>
+<section class="playbook" id="playbook">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">04 · EXECUTION PLAYBOOK</div><h2>Upload Checklist + Decision Rules</h2></div>
+<p>Every upload follows the same operating checklist so the strategy can be executed by the client, editor or content manager.</p>
+</div>
+<div class="two-col">
+<div class="checklist">
+<h3>YouTube upload checklist</h3>
+<div class="checks">
+<div class="check"><i>✓</i><span>Primary audience problem is clear in the first 30 seconds.</span></div>
+<div class="check"><i>✓</i><span>Primary keyword appears naturally near the start of the title.</span></div>
+<div class="check"><i>✓</i><span>Thumbnail communicates one idea at mobile size.</span></div>
+<div class="check"><i>✓</i><span>First description paragraph explains the actual episode topic.</span></div>
+<div class="check"><i>✓</i><span>Chapters use meaningful searchable topic names.</span></div>
+<div class="check"><i>✓</i><span>Captions checked; guest name and technical terms corrected.</span></div>
+<div class="check"><i>✓</i><span>Relevant playlist added: speed, rehab, coaching, psychology, nutrition, etc.</span></div>
+<div class="check"><i>✓</i><span>3–5 short-form moments marked for repurposing.</span></div>
+<div class="check"><i>✓</i><span>Thumbnail/title test prepared for priority episodes.</span></div>
+</div>
+</div>
+<div class="matrix">
+<h3>Analytics → action matrix</h3>
+<div class="matrix-row"><b>High impressions + low CTR</b><span>Rework title/thumbnail. Topic has distribution but packaging is weak.</span></div>
+<div class="matrix-row"><b>Good CTR + weak 30-sec retention</b><span>Opening is not fulfilling the thumbnail/title promise fast enough.</span></div>
+<div class="matrix-row"><b>Good retention + low reach</b><span>Test a stronger topic angle, packaging or search phrase.</span></div>
+<div class="matrix-row"><b>High saves/shares</b><span>Create follow-ups and a repeatable series around the same problem.</span></div>
+<div class="matrix-row"><b>High comments/questions</b><span>Turn repeated audience questions into the next episode or Short.</span></div>
+<div class="matrix-row"><b>Shorts perform, long-form does not</b><span>Use the winning short-form hook as the next long-form angle.</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="social" id="social">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">05 · SOCIAL MEDIA</div><h2>Multi-Format Content → Multi-Platform Growth System</h2></div>
+<p>Use podcasts, gym exercise footage, lifting demonstrations, coaching clips, recovery tips, nutrition content, carousels and behind-the-scenes material as separate content sources. Each platform should receive a native version instead of an identical repost.</p>
+</div>
+<div class="platform-grid"><div class="platform social-platform-card"><div class="icon">YT</div><h3>YouTube Shorts</h3><p class="platform-summary">Use Shorts for fast discovery: podcast insights, exercise demonstrations, lifting mistakes, coaching cues, recovery tips and nutrition answers that can stand alone in under a minute.</p><ul><li>20–45 sec primary clips</li><li>Hook or visual payoff in first 1–2 sec</li><li>One problem, exercise or lesson per Short</li><li>Use podcast clips and original gym footage</li></ul><button aria-controls="platformMore1" aria-expanded="false" class="platform-learn-more" type="button">Learn more</button><div class="platform-more" hidden="" id="platformMore1"><div class="platform-more-row"><b>Best content sources</b><span>Podcast highlights, squat/deadlift demonstrations, gym technique corrections, quick recovery advice, simple nutrition Q&amp;A and coach reactions.</span></div><div class="platform-more-row"><b>Packaging</b><span>Use a clear on-screen question or outcome such as “Why Your Squat Stalls” or “Do You Need Protein Right After Training?”</span></div><div class="platform-more-row"><b>Editing</b><span>Open on movement or the strongest sentence, crop vertically, add readable captions and remove long intros.</span></div><div class="platform-more-row"><b>Publishing goal</b><span>Reach new viewers first, then connect strong Shorts to related long-form videos, playlists or follow-up Shorts.</span></div></div></div><div class="platform social-platform-card"><div class="icon">IG</div><h3>Instagram</h3><p class="platform-summary">Build a visual education library with Reels, exercise demos, carousels, Stories and short coaching posts that people can save, share and revisit before or after training.</p><ul><li>Exercise and lifting Reels</li><li>Carousel summaries and checklists</li><li>Stories: polls, Q&amp;A, teaser and BTS</li><li>Strong cover text for grid readability</li></ul><button aria-controls="platformMore2" aria-expanded="false" class="platform-learn-more" type="button">Learn more</button><div class="platform-more" hidden="" id="platformMore2"><div class="platform-more-row"><b>Best content sources</b><span>Technique demonstrations, before/after coaching examples, mobility drills, balanced-diet tips, podcast quotes, client-safe gym B-roll and training checklists.</span></div><div class="platform-more-row"><b>Reels strategy</b><span>Lead with the movement or mistake on frame one. Keep the explanation practical and use native vertical framing.</span></div><div class="platform-more-row"><b>Carousel strategy</b><span>Turn one topic into 5–8 slides: problem → common mistake → correction → example → takeaway.</span></div><div class="platform-more-row"><b>Engagement</b><span>Use Stories to ask what followers struggle with, then turn repeated answers into the next Reel or carousel.</span></div></div></div><div class="platform social-platform-card"><div class="icon">TT</div><h3>TikTok</h3><p class="platform-summary">Use direct, searchable and conversational videos around gym questions, exercise form, lifting technique, recovery, food choices and coaching opinions. Content should feel native rather than repackaged.</p><ul><li>15–45 sec practical clips</li><li>Question, mistake or result immediately</li><li>Demonstration + explanation format</li><li>Reply-to-comment follow-up videos</li></ul><button aria-controls="platformMore3" aria-expanded="false" class="platform-learn-more" type="button">Learn more</button><div class="platform-more" hidden="" id="platformMore3"><div class="platform-more-row"><b>Best content sources</b><span>Gym-floor demonstrations, reaction-style coaching breakdowns, exercise myths, recovery mistakes, meal/fueling explanations and concise podcast moments.</span></div><div class="platform-more-row"><b>Search strategy</b><span>Say the search phrase naturally in the video and repeat it in on-screen text and caption, e.g. “how long to rest between sets.”</span></div><div class="platform-more-row"><b>Native style</b><span>Avoid polished corporate intros. Start with the movement, question or strongest opinion.</span></div><div class="platform-more-row"><b>Follow-ups</b><span>Use high-performing comments as prompts for the next video so the account builds connected topic clusters.</span></div></div></div><div class="platform social-platform-card"><div class="icon">FB</div><h3>Facebook</h3><p class="platform-summary">Use native Reels and useful educational posts for a broader community audience: gym exercises, coaching lessons, recovery guidance, nutrition basics, podcast highlights and relatable training discussions.</p><ul><li>Native Reels and short videos</li><li>Exercise / training education posts</li><li>Discussion-focused captions</li><li>Shareable coaching and recovery lessons</li></ul><button aria-controls="platformMore4" aria-expanded="false" class="platform-learn-more" type="button">Learn more</button><div class="platform-more" hidden="" id="platformMore4"><div class="platform-more-row"><b>Best content sources</b><span>Exercise demos, longer educational clips, podcast takeaways, simple nutrition graphics, training myths and community-friendly fitness advice.</span></div><div class="platform-more-row"><b>Caption strategy</b><span>Add enough context that the post makes sense without sound. Use one clear question to invite useful discussion.</span></div><div class="platform-more-row"><b>Community reach</b><span>Favor relatable topics that gym-goers, coaches and active adults can share with training partners or family.</span></div><div class="platform-more-row"><b>Repurposing</b><span>Do not simply repost an Instagram Reel with platform watermarks; export a clean master and upload natively.</span></div></div></div></div><div class="fitness-social-search" id="fitnessSocialSearch">
+<div class="fitness-social-head">
+<div>
+<div class="kicker">FITNESS / GYM SOCIAL SEARCH</div>
+<h3>Adapt the Same Topic to How People Search on Each Platform</h3>
+<p>Do not copy the YouTube title word-for-word everywhere. Keep the same topic, but package it in the language people naturally use when searching or scrolling for gym, exercise, coaching and fitness content.</p>
+</div>
+</div>
+<div class="fitness-platform-grid">
+<div class="fitness-platform-card">
+<div class="fp-label">YOUTUBE SHORTS</div>
+<h4>Stop Overcoaching These Gym Exercises</h4>
+<p><b>Search focus:</b> exercise cues · gym coaching · lifting technique · personal trainer tips</p>
+<p><b>Hook:</b> “If you give five cues before every rep, your client may be thinking more—not moving better.”</p>
+</div>
+<div class="fitness-platform-card">
+<div class="fp-label">INSTAGRAM REELS</div>
+<h4>3 Exercise Cues Fitness Coaches Overuse</h4>
+<p><b>Caption keywords:</b> fitness coach · personal trainer · exercise technique · strength training · movement quality</p>
+<p><b>Hashtag sample:</b> #FitnessCoach #PersonalTrainer #StrengthTraining #ExerciseTechnique #GymCoaching</p>
+</div>
+<div class="fitness-platform-card">
+<div class="fp-label">TIKTOK</div>
+<h4>Are You Overcoaching Your Gym Clients?</h4>
+<p><b>Search phrase:</b> personal trainer coaching tips · gym exercise form · coaching cues</p>
+<p><b>Format:</b> one mistake → one example → one better cue. Keep the spoken phrase aligned with the on-screen text.</p>
+</div>
+<div class="fitness-platform-card">
+<div class="fp-label">FACEBOOK</div>
+<h4>Too Many Exercise Cues? Why More Coaching Can Hurt Performance</h4>
+<p><b>Discovery language:</b> fitness coaching · gym exercises · strength training · athlete development</p>
+<p><b>Engagement prompt:</b> “Coaches: how many cues do you normally give during one set?”</p>
+</div>
+</div>
+<div class="social-search-rule">
+<b>Cross-platform rule:</b> keep one clear subject per post. A clip about squat cueing should stay about squat cueing—not also become a post about nutrition, mindset and recovery. Specific content is easier for both viewers and recommendation systems to categorize.
+      </div>
+</div>
+<div class="aest-timing" id="aestTiming">
+<div class="aest-head">
+<div>
+<div class="kicker">AUSTRALIA · AEST TEST WINDOWS</div>
+<h3>Sample Posting Times for Fitness &amp; Coaching Content</h3>
+<p>Use these as starting test windows, not guarantees. After 4–6 weeks, replace generic benchmarks with the client’s own YouTube Studio, Instagram Insights, TikTok Analytics and Meta data.</p>
+</div>
+<div class="aest-badge">AEST · UTC+10</div>
+</div>
+<div class="timing-grid">
+<div class="timing-card">
+<div class="timing-platform">YOUTUBE · LONG FORM</div>
+<strong>Sunday · 10:00 AM AEST</strong>
+<span>Secondary test: Tuesday 9:00 AM. For long-form, publish about 1–2 hours before the client’s known viewer peak once Audience analytics are available.</span>
+</div>
+<div class="timing-card">
+<div class="timing-platform">YOUTUBE SHORTS</div>
+<strong>Friday · 4:00–7:00 PM AEST</strong>
+<span>Evening viewing is a strong baseline for Shorts. Test a second window Thursday 7:00–9:00 PM for coaching clips.</span>
+</div>
+<div class="timing-card">
+<div class="timing-platform">INSTAGRAM</div>
+<strong>Mon–Thu · 5:00–10:00 PM AEST</strong>
+<span>For gym / coaching Reels, start with 6:00–8:00 PM and compare against a morning fitness test window.</span>
+</div>
+<div class="timing-card">
+<div class="timing-platform">TIKTOK</div>
+<strong>Tuesday &amp; Thursday · test peak windows</strong>
+<span>Tuesday: 7:00–8:00 PM or 9:00–11:00 PM. Thursday: 8:00–11:00 AM or 10:00–11:00 PM AEST.</span>
+</div>
+<div class="timing-card">
+<div class="timing-platform">FACEBOOK</div>
+<strong>Weekdays · 4:00–9:00 PM AEST</strong>
+<span>Start with Tuesday 5:00–9:00 PM. Mid-week evening content aligns with Australia-wide engagement benchmarks.</span>
+</div>
+<div class="timing-card fitness-test">
+<div class="timing-platform">FITNESS-SPECIFIC EXPERIMENT</div>
+<strong>Test pre-work vs after-work</strong>
+<span>Gym audiences may respond differently around training routines. Test 6:30–8:00 AM against 5:30–8:30 PM AEST, then keep only the window that wins in account analytics.</span>
+</div>
+</div>
+<div class="timing-note">
+<b>Time-zone note:</b> AEST is UTC+10. Sydney, Melbourne, Canberra and Hobart move to AEDT (UTC+11) during daylight-saving months, while Queensland remains on AEST. If the audience is mainly in NSW/VIC, schedule to their local clock rather than forcing a fixed UTC+10 time all year.
+      </div>
+<div class="timing-source">
+        Baseline sources: Sprout Social, <a href="https://sproutsocial.com/insights/best-times-to-post-on-social-media-australia/" rel="noopener" target="_blank">Australia posting-time research (2026)</a>;
+        Buffer, <a href="https://buffer.com/resources/best-time-to-post-on-youtube/" rel="noopener" target="_blank">YouTube timing study (2026)</a>.
+      </div>
+</div><div class="calendar">
+<div class="cal-head"><div>DAY</div><div>PRIMARY ASSET</div><div>SUPPORTING ASSET</div><div>PURPOSE</div></div>
+<div class="cal-row"><div>MON</div><div>Full YouTube episode</div><div>IG Story teaser</div><div>Authority + long-form watch time</div></div>
+<div class="cal-row"><div>TUE</div><div>Short #1: strongest claim</div><div>TikTok version</div><div>Reach / discovery</div></div>
+<div class="cal-row"><div>WED</div><div>Carousel: 5 key lessons</div><div>Story poll</div><div>Saves + audience research</div></div>
+<div class="cal-row"><div>THU</div><div>Short #2: practical tip</div><div>Facebook Reel</div><div>Shares + education</div></div>
+<div class="cal-row"><div>FRI</div><div>Short #3: myth / debate</div><div>Comment response</div><div>Conversation + engagement</div></div>
+<div class="cal-row"><div>WEEKEND</div><div>Best quote / BTS clip</div><div>Review analytics</div><div>Humanize + improve next cycle</div></div>
+</div>
+</div>
+</section>
+<section class="management" id="management">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">06 · CONTENT MANAGEMENT ACROSS PLATFORMS</div><h2>One Content System for Podcasts, Gym Videos &amp; Social Posts</h2></div>
+<p>Manage podcast episodes, gym exercise demonstrations, lifting clips, coaching tips, recovery content, nutrition posts, carousels and behind-the-scenes assets in one trackable workflow. Every content item should have an owner, status, due date, final file and published URL.</p>
+</div>
+<div class="management-grid">
+<div class="pipeline"><h3 style="margin-top:0">Recommended multi-format content pipeline</h3><div class="pipeline-row"><b>1 · Research</b><span>Choose the topic, search intent, audience problem, format and platform. Decide whether the idea works best as a podcast, exercise demo, lifting clip, recovery tip, nutrition post, carousel or short-form video.</span></div><div class="pipeline-row"><b>2 · Plan</b><span>Define the hook, title/caption direction, thumbnail or cover concept, filming requirements, B-roll, exercise angles and expected deliverables.</span></div><div class="pipeline-row"><b>3 · Capture</b><span>Record the podcast, gym exercise, lifting set, coaching explanation, recovery demonstration, food/nutrition visual or behind-the-scenes footage needed for the content.</span></div><div class="pipeline-row"><b>4 · Organize</b><span>Save raw video, audio, photos, thumbnails, graphics, logos and notes into one clearly named content folder before editing.</span></div><div class="pipeline-row"><b>5 · Edit</b><span>Create the main version first, then cut native Shorts, Reels, TikToks, Facebook clips, carousels or Stories from the same source where appropriate.</span></div><div class="pipeline-row"><b>6 · Review</b><span>Check exercise accuracy, guest names, technical wording, captions, nutrition wording, brand consistency, music rights and final export quality.</span></div><div class="pipeline-row"><b>7 · Schedule</b><span>Prepare the platform-native title, cover, caption, hashtags, description, tags and publishing time for each destination.</span></div><div class="pipeline-row"><b>8 · Publish &amp; Engage</b><span>Record public URLs, reply to relevant comments, save useful audience questions and identify follow-up content opportunities.</span></div><div class="pipeline-row"><b>9 · Analyze &amp; Reuse</b><span>Track views, retention, saves, shares, comments, clicks and follower growth. Rework strong topics into new formats instead of repeating the exact same post.</span></div></div>
+<div>
+<div class="asset-table"><div class="asset-row asset-head"><div>CONTENT ASSET</div><div>QTY</div><div>STATUS</div></div><div class="asset-row"><div>YouTube long-form / podcast</div><div>1</div><div class="status">As needed</div></div><div class="asset-row"><div>YouTube Shorts</div><div>2–5</div><div class="status">Planned</div></div><div class="asset-row"><div>Instagram Reels</div><div>2–4</div><div class="status">Planned</div></div><div class="asset-row"><div>TikTok clips</div><div>2–4</div><div class="status">Planned</div></div><div class="asset-row"><div>Facebook Reels</div><div>1–3</div><div class="status">Planned</div></div><div class="asset-row"><div>Gym exercise demo</div><div>1–3</div><div class="status">Core</div></div><div class="asset-row"><div>Lifting / technique clip</div><div>1–3</div><div class="status">Core</div></div><div class="asset-row"><div>Recovery / mobility tip</div><div>1–2</div><div class="status">Optional</div></div><div class="asset-row"><div>Nutrition / balanced diet post</div><div>1–2</div><div class="status">Optional</div></div><div class="asset-row"><div>Carousel / checklist</div><div>1</div><div class="status">Optional</div></div><div class="asset-row"><div>Stories / poll / Q&amp;A</div><div>2–4</div><div class="status">Optional</div></div><div class="asset-row"><div>Behind-the-scenes / coach POV</div><div>1–2</div><div class="status">Optional</div></div></div>
+<div class="naming"><b>Suggested file naming:</b><br/><code>TPG_POD_EP10_FunctionalHealth_YT_LONG_v03.mp4</code><br/><code>TPG_GYM_SquatDepth_REEL_01_v02.mp4</code><br/><code>TPG_LIFT_DeadliftSetup_SHORT_01_v01.mp4</code><br/><code>TPG_RECOVERY_RestDay_CAROUSEL_v02.png</code><br/><code>TPG_NUTRITION_PreWorkoutMeal_IG_v01.mp4</code><br/></div>
+<div class="note"><b style="color:#fff">Track these fields:</b> content ID · source type · platform · format · topic · hook · title/caption · thumbnail/cover · owner · filming status · edit status · due date · approval status · scheduled date · published URL · views · retention · saves · shares · comments · follower impact · reuse potential · notes.</div>
+</div>
+</div>
+<div class="content-source-matrix">
+<div class="source-card">
+<div class="support-kicker">PODCAST</div>
+<h4>Conversation &amp; Education</h4>
+<p>Long-form discussion, expert clips, myths, Q&amp;A, quote posts and follow-up Shorts.</p>
+</div>
+<div class="source-card">
+<div class="support-kicker">GYM EXERCISE</div>
+<h4>Demonstration Content</h4>
+<p>Exercise setup, form corrections, regressions, progressions, common mistakes and coaching cues.</p>
+</div>
+<div class="source-card">
+<div class="support-kicker">LIFTING</div>
+<h4>Strength &amp; Technique</h4>
+<p>Squat, deadlift, press and accessory technique; load management; strength progression and safety.</p>
+</div>
+<div class="source-card">
+<div class="support-kicker">RECOVERY</div>
+<h4>Rest &amp; Readiness</h4>
+<p>Mobility, rest days, sleep, fatigue, soreness, training readiness and return-to-training education.</p>
+</div>
+<div class="source-card">
+<div class="support-kicker">NUTRITION</div>
+<h4>Fuel &amp; Balanced Diet</h4>
+<p>Pre/post-workout meals, protein, hydration, balanced eating and practical food guidance for active people.</p>
+</div>
+<div class="source-card">
+<div class="support-kicker">COMMUNITY</div>
+<h4>Stories &amp; Engagement</h4>
+<p>Polls, Q&amp;A, coach POV, behind-the-scenes, comment responses and audience-led content ideas.</p>
+</div>
+</div></div>
+</section>
+<section class="analytics" id="analytics">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">07 · MEASUREMENT</div><h2>Track the Funnel, Not Just Views</h2></div>
+<p>The purpose of analytics is to make the next content decision clearer.</p>
+</div>
+<div class="metric-grid">
+<div class="metric"><b>Impressions</b><span>Did YouTube distribute the topic?</span></div>
+<div class="metric"><b>CTR</b><span>Did title + thumbnail earn the click?</span></div>
+<div class="metric"><b>30-sec retention</b><span>Did the opening match the promise?</span></div>
+<div class="metric"><b>Avg. view duration</b><span>Did the episode sustain attention?</span></div>
+<div class="metric"><b>Shares / saves</b><span>Did viewers find the content useful enough to pass on?</span></div>
+</div>
+<div class="note"><b style="color:#fff">Operating principle:</b> do not change everything at once. Diagnose the weakest stage of the funnel, test one major variable, then compare the next upload or A/B result.</div>
+</div>
+</section>
+<div aria-hidden="true" class="thumb-modal" id="thumbModal">
+<div class="thumb-modal-inner">
+<div class="thumb-modal-bar">
+<div><b>Sample YouTube Thumbnail — Full 16:9 Preview</b><br/><span style="color:#8d96a1">Review mobile readability, face separation, brand hierarchy and topic clarity.</span></div>
+<button class="thumb-modal-close" id="thumbModalClose">CLOSE ✕</button>
+</div>
+<img alt="Full 16:9 sample thumbnail preview" id="thumbModalImage"/>
+</div>
+</div>
+<div aria-hidden="true" class="episode-design-modal" id="episodeDesignModal">
+<div class="episode-design-dialog">
+<div class="episode-design-bar">
+<b>Full 16:9 Thumbnail Preview</b>
+<button id="episodeDesignClose">CLOSE ✕</button>
+</div>
+<div class="episode-design-stage" id="episodeDesignStage"></div>
+</div>
+</div><footer>
+<div class="container"><div class="creator-credit-footer" id="creatorCreditFooter">
+<div>
+<span>Strategy &amp; website prepared by</span>
+<strong>Dexter Pabalate Bagaipo</strong>
+<small>Video Editor &amp; Content Strategist</small>
+</div>
+<a href="mailto:dexterpabalatebagaipo@gmail.com">dexterpabalatebagaipo@gmail.com</a>
+</div>THE PERFORMANCE GAP · STRATEGY WEBSITE · No booking / sales CTA included. Sample packaging concepts should be replaced with confirmed episode details before client publication.</div>
+</footer>
+<script>
+function copyText(id, btn){
+  navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>{
+    const old=btn.innerText; btn.innerText="COPIED"; setTimeout(()=>btn.innerText=old,1200);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const frame = document.querySelector('.player-frame');
+  const modal = document.getElementById('thumbModal');
+  const modalImg = document.getElementById('thumbModalImage');
+  const closeBtn = document.getElementById('thumbModalClose');
+
+  if(frame && modal && modalImg){
+    frame.addEventListener('click', function(){
+      const img = frame.querySelector('img');
+      if(img){
+        modalImg.src = img.src;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow='hidden';
+      }
+    });
+  }
+
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function(){
+  const modal = document.getElementById('episodeDesignModal');
+  const stage = document.getElementById('episodeDesignStage');
+  const close = document.getElementById('episodeDesignClose');
+
+  document.querySelectorAll('.episode-grid .episode-preview').forEach(function(preview){
+    preview.addEventListener('click', function(){
+      if(!modal || !stage) return;
+      stage.innerHTML = '';
+      const clone = preview.cloneNode(true);
+      clone.classList.remove('episode-preview');
+      clone.querySelectorAll('.real-badge').forEach(function(x){ x.remove(); });
+      stage.appendChild(clone);
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    });
+  });
+
+  function closeEpisodePreview(){
+    if(!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    if(stage) stage.innerHTML='';
+    document.body.style.overflow='';
+  }
+
+  if(close) close.addEventListener('click', closeEpisodePreview);
+  if(modal) modal.addEventListener('click', function(e){
+    if(e.target === modal) closeEpisodePreview();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeEpisodePreview();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.platform-learn-more').forEach(function(button){
+    button.addEventListener('click', function(){
+      const targetId = button.getAttribute('aria-controls');
+      const panel = document.getElementById(targetId);
+      const card = button.closest('.social-platform-card');
+      if(!panel) return;
+
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      button.textContent = isOpen ? 'Learn more' : 'Show less';
+
+      if(isOpen){
+        panel.hidden = true;
+        if(card) card.classList.remove('expanded');
+      } else {
+        panel.hidden = false;
+        if(card) card.classList.add('expanded');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

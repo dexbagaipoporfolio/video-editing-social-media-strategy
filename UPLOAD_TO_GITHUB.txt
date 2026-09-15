@@ -1,0 +1,16 @@
+UPLOAD TO GITHUB — SIMPLE PORTFOLIO-STYLE METHOD
+
+1. Create/open the GitHub repository.
+2. Upload:
+   - index.html
+   - assets folder
+   - .nojekyll
+   - README.md
+3. Commit changes.
+4. Go to Settings > Pages.
+5. Source: Deploy from a branch
+6. Branch: main
+7. Folder: / (root)
+8. Save.
+
+The website is static and does not need npm, Node.js, or GitHub Actions.
